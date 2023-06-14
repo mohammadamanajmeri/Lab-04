@@ -86,7 +86,10 @@ def generate_source_ip_log(ip_address):
     """
     # TODO: Complete function body per step 11
     # Get all records that have the specified sourec IP address
+    regex = f"SRC={ip_address}"
+    data = log_analysis_lib.filter_log_by_regex(log_path, regex)
     # Save all records to a plain text .log file
+
     return
 
 if __name__ == '__main__':
